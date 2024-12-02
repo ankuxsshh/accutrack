@@ -1,71 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Coming Soon</title>
-  <!-- Bootstrap CSS -->
-  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-  <style>
-    /* Full-page background image */
-    body, html {
-      height: 100%;
-      margin: 0;
-      font-family: 'Poppins', sans-serif;
-    }
+{% extends 'base.html' %}
 
-    .bg-img {
-      background-image: url('https://i0.wp.com/picjumbo.com/wp-content/uploads/very-foggy-weather-in-forested-hills-free-photo.jpeg?w=600&quality=80');
-      height: 100%;
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;
-      position: relative;
-      color: white;
-      text-align: center;
-    }
-
-    /* Center content */
-    .center-content {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      text-align: center;
-    }
-
-    .center-content h2 {
-      font-size: 60px;
-      margin-bottom: 30px;
-      font-weight: bold;
-    }
-    p {
-      font-size: 16px;
-    }
-    p2 {
-      font-size: 20px;
-      color: rgb(50, 50, 50);
-    }
-  </style>
-</head>
-<body>
-
-  <div class="bg-img">
-    <!-- Center content -->
-    <div class="center-content">
-      <p2>accutrack.ae</p2>
-      <br>
-      <br>
-      <h2><b>COMING SOON</b></h2>
-      <p>Website under construction: Revolutionizing automation with cutting-edge solutions soon!</p>
+{% block content %}
+  <!-- Carousel -->
+  <div id="imageCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2000">
+    <div class="carousel-inner">
+      <!-- First Slide -->
+      <div class="carousel-item active">
+        <img src="https://static.vecteezy.com/system/resources/thumbnails/007/019/194/small_2x/manager-engineer-check-and-control-automation-robot-arms-machine-in-intelligent-factory-industrial-on-real-time-monitoring-system-software-welding-robotics-and-digital-manufacturing-operation-photo.jpg" class="d-block w-100" alt="First Slide">
+      </div>
+      <!-- Second Slide -->
+      <div class="carousel-item">
+        <img src="https://t4.ftcdn.net/jpg/07/85/41/43/360_F_785414353_jkzg2rMC2yJA3TmQcVjwLGP6WDqf3yzc.jpg" class="d-block w-100" alt="Second Slide">
+      </div>
     </div>
-
   </div>
 
-  <!-- Bootstrap JS (optional) -->
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-</body>
-</html>
+{% endblock %}
