@@ -152,6 +152,64 @@ html {
     }
 }
 
+/* FOOTER */
+footer h5 {
+    color: #000000 !important;
+    font-weight: 500;
+}
+
+footer h5:hover {
+    color: rgb(0, 0, 0);
+}
+
+footer p {
+    color: #000000 !important;
+}
+
+footer p:hover {
+    color: rgb(47, 38, 163);
+}
+
+footer .fab {
+    font-size: 1.8rem;
+    transition: color 0.3s;
+    color: rgb(0, 0, 0) !important;
+}
+
+footer .fab:hover {
+    color: rgb(75, 67, 194);
+}
+
+footer {
+    box-shadow: 2px 2px 2px 4px rgba(0, 0, 0, 0.2);
+    background-color: rgb(241, 240, 255) !important;
+}
+
+/* Centering footer columns in a row */
+footer .row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 50px;
+}
+
+/* Responsive Styles for smaller devices */
+@media (max-width: 768px) {
+    footer .row {
+        text-align: center;
+    }
+
+    footer .col-md-3 {
+        margin-bottom: 15px;
+    }
+
+    /* Make the columns stack vertically in small screens */
+    footer .col-md-3 {
+        flex: 1 1 100%;
+    }
+}
+
 /* WHATSAPP, CALL BUTTONS */
 
 .fixed-buttons {
@@ -173,7 +231,7 @@ html {
     width: 50px;
     height: 50px;
     text-decoration: none;
-    border-radius: 10px;
+    border-radius: 50%;
     position: relative;
     animation: pulse 1.5s ease-out infinite;
     transition: transform 0.3s ease-in-out;
@@ -226,7 +284,7 @@ html {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.4);
+    background: rgba(0, 0, 0, 0.5);
     /* Adjust the opacity as needed */
     z-index: 1;
     /* Ensures the overlay is on top of the image */
@@ -243,64 +301,117 @@ html {
 }
 
 .overlay-heading {
-    font-size: 4.4rem;
+    font-size: 4rem;
     font-weight: bold;
     text-align: center;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
 }
 
 .overlay-text {
-    font-size: 2.10rem;
+    font-size: 2rem;
     text-align: center;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
 }
 
-/* Fade-up effect for footer */
-@keyframes fadeUp {
-    0% {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* Apply animation only when it enters the viewport */
-[data-aos="fade-up"] {
-    opacity: 0;
-    /* Start as invisible */
-    animation: fadeUp 1s ease-out forwards;
-}
-
-[data-aos="fade-up"].aos-animate {
-    opacity: 1;
-    /* Fully visible when the animation ends */
-}
-
-
-
 #about-us {
     background-color: #ffffff;
+    margin: 55px;
 }
 
 #about-us h2 {
     font-size: 2.5rem;
-    font-weight: 600;
-    color: #343a40;
+    font-weight: 1000;
+    color: #5e3ee1;
 }
 
 #about-us p {
     font-size: 1.1rem;
-    color: #242525;
-    line-height: 1.8;
+    color: #000000;
+    line-height: 1.4;
+    justify-content: right;
 }
 
 #about-us .img-fluid {
     border-radius: 10px;
-    height: 350px;
+    height: 340px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     width: 100%;
+}
+
+/* Initial state of the elements, hidden and faded */
+.fade-up {
+    opacity: 0;
+    transform: translateY(50px); /* Start from below */
+    transition: opacity 0.5s ease, transform 0.5s ease; /* Add transition */
+}
+
+/* Final state of the elements, visible and on place */
+.fade-up.visible {
+    opacity: 1;
+    transform: translateY(0); /* Move to original position */
+}
+
+/* Optional: Add a smooth animation for the fade-up effect when the elements are in the viewport */
+@media (max-width: 768px) {
+    .fade-up {
+        transition: opacity 0.5s ease, transform 0.5s ease;
+    }
+}
+
+/* Modify existing styles if necessary */
+.service-card {
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+}
+
+/* Adding transition to card images */
+.service-card .card-img-overlay {
+    background: rgba(0, 0, 0, 0.6);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.service-card:hover .card-img-overlay {
+    opacity: 1;
+}
+
+.service-card img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
+.service-card .card-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.row-cols-custom-7>* {
+    flex: 0 0 calc(100% / 7);
+    max-width: calc(100% / 7);
+}
+
+.row-cols-custom-6>* {
+    flex: 0 0 calc(100% / 6);
+    max-width: calc(100% / 6);
+}
+
+@media (max-width: 768px) {
+    .row-cols-custom-7>*,
+    .row-cols-custom-6>* {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
+
+/* Keyframe for fade-in animation */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
