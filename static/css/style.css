@@ -103,7 +103,7 @@ html {
     outline: none;
     color: #000000;
     font-size: 16px;
-    line-height: 40px;
+    line-height: 1.6;
     width: 0;
     padding: 0;
     transition: width 0.4s ease, padding 0.4s ease;
@@ -327,8 +327,8 @@ footer .row {
 #about-us p {
     font-size: 1.1rem;
     color: #000000;
-    line-height: 1.4;
-    justify-content: right;
+    line-height: 1.6;
+    text-justify: center;
 }
 
 #about-us .img-fluid {
@@ -341,14 +341,17 @@ footer .row {
 /* Initial state of the elements, hidden and faded */
 .fade-up {
     opacity: 0;
-    transform: translateY(50px); /* Start from below */
-    transition: opacity 0.5s ease, transform 0.5s ease; /* Add transition */
+    transform: translateY(50px);
+    /* Start from below */
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    /* Add transition */
 }
 
 /* Final state of the elements, visible and on place */
 .fade-up.visible {
     opacity: 1;
-    transform: translateY(0); /* Move to original position */
+    transform: translateY(0);
+    /* Move to original position */
 }
 
 /* Optional: Add a smooth animation for the fade-up effect when the elements are in the viewport */
@@ -384,7 +387,7 @@ footer .row {
 }
 
 .service-card .card-title {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     font-weight: bold;
 }
 
@@ -399,6 +402,7 @@ footer .row {
 }
 
 @media (max-width: 768px) {
+
     .row-cols-custom-7>*,
     .row-cols-custom-6>* {
         flex: 0 0 100%;
@@ -411,7 +415,47 @@ footer .row {
     0% {
         opacity: 0;
     }
+
     100% {
         opacity: 1;
     }
+}
+
+
+.why-container .row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    margin: 75px;
+}
+
+.why-container .col-md-6 {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.why-container .image-container {
+    width: 500px;
+    height: 220px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.why-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.why-container p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #000000;
+    margin: 0;
+    padding: 15px;
+    text-justify: center;
 }
