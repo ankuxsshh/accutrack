@@ -24,7 +24,7 @@ html {
 .contact-info {
     font-size: 17px;
     margin-left: 220px;
-    font-weight: 300;
+    font-weight: 600;
     color: #ffffff;
     transition: transform 0.3s, color 0.3s;
 }
@@ -79,7 +79,7 @@ html {
 .nav-link {
     color: #000000 !important;
     font-size: 17px;
-    font-weight: 300;
+    font-weight: 600;
     transition: color 0.3s, transform 0.3s;
 }
 
@@ -155,7 +155,7 @@ html {
 /* FOOTER */
 footer h5 {
     color: #000000 !important;
-    font-weight: 500;
+    font-weight: 600;
 }
 
 footer h5:hover {
@@ -164,6 +164,7 @@ footer h5:hover {
 
 footer p {
     color: #000000 !important;
+    font-weight: 600;
 }
 
 footer p:hover {
@@ -228,15 +229,15 @@ footer .row {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 50px;
-    height: 50px;
+    width: 60px;
+    height: 60px;
     text-decoration: none;
     border-radius: 50%;
     position: relative;
     animation: pulse 1.5s ease-out infinite;
     transition: transform 0.3s ease-in-out;
     padding: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .btn-whatsapp-pulse:hover {
@@ -387,8 +388,8 @@ footer .row {
 }
 
 .service-card .card-title {
-    font-size: 1.4rem;
-    font-weight: bold;
+    font-size: 1rem;
+    font-weight: bolder;
 }
 
 .row-cols-custom-7>* {
@@ -458,4 +459,144 @@ footer .row {
     margin: 0;
     padding: 15px;
     text-justify: center;
+}
+
+/* Styling for the form container */
+.custom-form {
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    padding: 20px;
+    height: 420px;
+    /* Adjust the overall height of the form */
+}
+
+/* Styling for input fields and textarea */
+.custom-input {
+    height: 65px;
+    /* Increases height for input fields */
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.custom-input:focus {
+    border-color: #0044ff;
+    box-shadow: 0 0 5px rgba(0, 68, 255, 0.5);
+}
+
+/* Textarea specific height adjustment */
+textarea.custom-input {
+    height: 150px;
+    /* Increase the textarea height */
+    resize: none;
+}
+
+/* Button styling */
+button {
+    background-color: #0044ff;
+    border: none;
+    font-size: 1rem;
+    padding: 10px;
+    height: 50px;
+}
+
+button:hover {
+    background-color: #0033cc;
+}
+
+.projects-section {
+    background-color: #f8f9fa;
+}
+
+.project-card {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+.project-card-img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transition: opacity 0.3s ease;
+}
+
+.project-card:hover .project-card-img {
+    opacity: 0.8;
+}
+
+.project-card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.project-card:hover .project-card-overlay {
+    opacity: 1;
+}
+
+.project-card-overlay h5 {
+    margin: 0;
+    font-size: 18px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+}
+
+.bank-slider-wrapper {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.bank-slider {
+    display: flex;
+    animation: scroll-right-to-left 20s linear infinite;
+}
+
+.bank-slide {
+    display: flex;
+}
+
+.bank-slide img {
+    width: 300px;
+    /* Adjust the width as needed */
+    height: 200px;
+    /* Adjust the height as needed */
+    margin: 20px;
+    /* Space between images */
+}
+
+/* Smooth sliding effect from right to left */
+@keyframes scroll-right-to-left {
+    0% {
+        transform: translateX(100%);
+        /* Start from the right */
+    }
+
+    100% {
+        transform: translateX(-100%);
+        /* End at the left */
+    }
+}
+
+/* Media Queries for smaller screens */
+@media (max-width: 768px) {
+    .bank-slide img {
+        width: 150px;
+        margin: 20px;
+        height: 150px;
+    }
 }

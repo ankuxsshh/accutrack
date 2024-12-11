@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>
       {% block title %}
-        ACCUTRACK  |  Home
+        Home | ACCUTRACK
       {% endblock %}
     </title>
     <!-- Bootstrap CSS -->
@@ -22,12 +22,12 @@
     <!-- Navbar Blending with Carousel -->
     <nav id="mainNavbar" class="navbar navbar-expand-lg navbar-blend">
       <div class="container-fluid">
-        <div class="contact-info d-flex align-items-center">
+        <div class="contact-info d-flex align-items-center fade-up">
           <span class="navbar-text me-3 text-white"><i class="fa-regular fa-envelope"></i> razak@accutrack.ae</span>
           <span class="navbar-text me-3 text-white"><i class="fa-solid fa-phone"></i> +971 581 825 985</span>
         </div>
 
-        <div class="searchBox d-flex align-items-center">
+        <div class="searchBox d-flex align-items-center fade-up">
           <input class="searchInput" type="text" placeholder=" Search..." />
           <button class="searchButton"><i class="fa-solid fa-magnifying-glass"></i></button>
         </div>
@@ -35,22 +35,27 @@
     </nav>
 
     <section>
-      <nav class="navbar navbar-expand-lg info-navbar">
-        <a class="navbar-brand" href="#"><img src="static/images/logo.jpg" alt="ACCUTRACK" /></a>
+      <nav class="navbar navbar-expand-lg info-navbar fade-up">
+        <a class="navbar-brand" href="{% url 'index' %}">
+          <img src="static/images/logo.jpg" alt="ACCUTRACK" />
+        </a>      
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav mx-auto">
             <li class="nav-item">
-              <a class="nav-link" href="about">ABOUT US</a>
+              <a class="nav-link" href="{% url 'index' %}">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="services">SERVICES</a>
+              <a class="nav-link" href="{% url 'about' %}">About</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="gallery">GALLERY</a>
+              <a class="nav-link" href="{% url 'services' %}">Services</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="contact">CONTACT US</a>
+              <a class="nav-link" href="{% url 'gallery' %}">Gallery</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'contact' %}">Contact Us</a>
             </li>
           </ul>
         </div>
@@ -79,10 +84,7 @@
                   <b>AccutrackTechnologies LLC</b>
                 </p>
                 <p>
-                  M08, Royal House Building, Deira
-                </p>
-                <p>
-                  Dubai, UAE
+                  M08, Royal House Building, Deira, Dubai, UAE
                 </p>
             </div>
   
@@ -113,7 +115,7 @@
   
           <hr class="my-4 bg-light border fade-up" />
   
-          <p class="mb-0 fade-up">© 2020 ACCUTRACK. All rights reserved.  |  Designed and Developed by <a href="https://inspirezesttechnologies.com/" class="fade-up" style="color: #3c52c3 !important; text-decoration: none;"><b> InspireZest Technologies Pvt Ltd<b></a></p> 
+          <p class="mb-0 fade-up">© 2020 ACCUTRACK. All rights reserved  |  Designed and Developed by <a href="https://inspirezesttechnologies.com/" class="fade-up" style="color: #3c52c3 !important; text-decoration: none;"><b> InspireZest Technologies Pvt Ltd<b></a></p> 
       </div>
   </footer>  
 
