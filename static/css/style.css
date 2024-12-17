@@ -20,6 +20,10 @@ html {
     box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.4);
 }
 
+.navbar-toggler.active+.collapse {
+    background-color: white !important;
+}
+
 /* Contact Information Styling */
 .contact-info {
     font-size: 17px;
@@ -38,7 +42,7 @@ html {
 
 /* Contact info hover effect */
 .contact-info:hover {
-    transform: scale(1.05);
+    transform: scale(1.2);
     color: #d3e1ff;
 }
 
@@ -62,9 +66,7 @@ html {
 /* Hover effect for logo */
 .info-navbar .navbar-brand img:hover {
     transform: scale(1.1);
-    /* Slightly enlarge the image */
     opacity: 0.9;
-    /* Slightly fade the image for a smooth effect */
 }
 
 .navbar-nav {
@@ -140,15 +142,48 @@ html {
     border-radius: 10px;
 }
 
-@media screen and (max-width: 620px) {
-    h1 {
-        font-size: 1rem;
+@media only screen and (max-width: 600px) {
+
+    .contact-info {
+        margin-left: 0;
         text-align: center;
+        font-size: 12.5px;
     }
 
-    .searchBox:hover .searchInput {
-        width: 200px;
-        padding: 0 10px;
+    .navbar-nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-item {
+        margin-left: 0;
+        padding: 10px 0;
+    }
+
+    .searchBox {
+        width: 100%;
+        justify-content: center;
+        margin-top: 10px;
+    }
+
+    .searchInput {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .searchButton {
+        width: 40px;
+        height: 40px;
+    }
+
+    footer .row {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    footer .col-md-3 {
+        margin-bottom: 15px;
+        flex: 1 1 100%;
     }
 }
 
@@ -195,24 +230,7 @@ footer .row {
     gap: 50px;
 }
 
-/* Responsive Styles for smaller devices */
-@media (max-width: 768px) {
-    footer .row {
-        text-align: center;
-    }
-
-    footer .col-md-3 {
-        margin-bottom: 15px;
-    }
-
-    /* Make the columns stack vertically in small screens */
-    footer .col-md-3 {
-        flex: 1 1 100%;
-    }
-}
-
 /* WHATSAPP, CALL BUTTONS */
-
 .fixed-buttons {
     position: fixed;
     bottom: 40px;
@@ -302,7 +320,7 @@ footer .row {
 }
 
 .overlay-heading {
-    font-size: 4rem;
+    font-size: 3rem;
     font-weight: bold;
     text-align: center;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
@@ -314,22 +332,46 @@ footer .row {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
 }
 
+/* Mobile Responsiveness */
+@media only screen and (max-width: 600px) {
+    .carousel-item img {
+        height: 70vh;
+        /* Adjust image height for smaller screens */
+    }
+
+    .carousel-caption {
+        top: 20%;
+        /* Adjust caption positioning for mobile */
+    }
+
+    .overlay-heading {
+        font-size: 1.5rem;
+        /* Reduce font size for smaller screens */
+    }
+
+    .overlay-text {
+        font-size: 1.2rem;
+        /* Adjust text size for mobile */
+    }
+}
+
+
 #about-us {
     background-color: #ffffff;
     margin: 55px;
 }
 
 #about-us h2 {
-    font-size: 2.5rem;
+    font-size: 2.3rem;
     font-weight: 1000;
     color: #5e3ee1;
 }
 
 #about-us p {
-    font-size: 1.1rem;
+    font-size: 1rem;
     color: #000000;
     line-height: 1.6;
-    text-justify: center;
+    text-align: justify;
 }
 
 #about-us .img-fluid {
@@ -356,11 +398,69 @@ footer .row {
 }
 
 /* Optional: Add a smooth animation for the fade-up effect when the elements are in the viewport */
-@media (max-width: 768px) {
+@media only screen and (max-width: 600px) {
     .fade-up {
         transition: opacity 0.5s ease, transform 0.5s ease;
     }
 }
+
+/* Mobile responsiveness */
+@media only screen and (max-width: 600px) {
+    #about-us {
+        margin: 20px;
+        padding: 10px;
+    }
+
+    #about-us h2 {
+        font-size: 1.8rem;
+        text-align: center;
+    }
+
+    #about-us p {
+        font-size: 0.9rem;
+        text-align: justify;
+    }
+
+    #about-us .img-fluid {
+        height: auto;
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    /* Adjusting the layout for smaller screens */
+    .container-fluid {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    /* Adjust text and image placement for smaller screens */
+    .row {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .col-lg-6 {
+        width: 100%;
+        text-align: center;
+    }
+
+    .col-lg-6 img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .col-lg-6 p {
+        font-size: 1rem;
+        padding: 0 10px;
+    }
+
+    .fade-up {
+        opacity: 1 !important;
+        animation: none !important;
+    }
+}
+
 
 /* Modify existing styles if necessary */
 .service-card {
@@ -402,26 +502,25 @@ footer .row {
     max-width: calc(100% / 6);
 }
 
-@media (max-width: 768px) {
+/* Mobile Responsiveness */
+@media only screen and (max-width: 600px) {
 
     .row-cols-custom-7>*,
     .row-cols-custom-6>* {
         flex: 0 0 100%;
         max-width: 100%;
     }
-}
 
-/* Keyframe for fade-in animation */
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
+    #service-description {
+        font-size: 0.9rem;
+        text-align: justify;
     }
 
-    100% {
-        opacity: 1;
+    /* Optionally, you can also adjust the title size on mobile */
+    h2 {
+        font-size: 1.8rem;
     }
 }
-
 
 .why-container .row {
     display: flex;
@@ -453,13 +552,45 @@ footer .row {
 }
 
 .why-container p {
-    font-size: 1.2rem;
+    font-size: 1rem;
     line-height: 1.6;
     color: #000000;
     margin: 0;
     padding: 15px;
     text-justify: center;
 }
+
+/* Mobile Styles */
+@media (max-width: 767px) {
+    .why-container .col-12 {
+        text-align: center;
+    }
+    
+    .why-container p {
+        font-size: 0.9rem; /* Increase font size for mobile */
+        padding: 5px; /* Adjust padding */
+    }
+
+    .why-container .image-container {
+        width: 100%;
+        height: 250px; /* Adjust image container height for mobile */
+    }
+
+    .why-container img {
+        width: 100%;
+        height: auto;
+    }
+
+    .why-container .row {
+        flex-direction: column;
+        margin: 15px 0; /* Add margin between rows for mobile */
+    }
+
+    .why-container .col-md-6 {
+        width: 100%; /* Full width for images and text in mobile */
+    }
+}
+
 
 /* Styling for the form container */
 .custom-form {
@@ -593,7 +724,7 @@ button:hover {
 }
 
 /* Media Queries for smaller screens */
-@media (max-width: 768px) {
+@media only screen and (max-width: 600px) {
     .bank-slide img {
         width: 150px;
         margin: 20px;
