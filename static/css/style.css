@@ -90,13 +90,13 @@ html {
 
 .nav-item {
     padding: 0px 10px;
-    margin-left: 20px;
+    margin-left: 30px;
 }
 
 .nav-link {
     color: #000000 !important;
     font-size: 17px;
-    font-weight: 500;
+    font-weight: 600;
     transition: color 0.3s, transform 0.3s;
 }
 
@@ -196,6 +196,7 @@ html {
 footer h5 {
     color: #435ac7;
     transition: color 0.3s ease;
+    font-weight: 600;
 }
 
 footer h5:hover {
@@ -206,6 +207,7 @@ footer h5:hover {
 footer .footer-text {
     color: #435ac7;
     transition: color 0.3s ease;
+    font-weight: 600;
 }
 
 footer .footer-text:hover {
@@ -466,7 +468,6 @@ footer .social-icon:hover {
 @media only screen and (max-width: 600px) {
     #about-us {
         margin: 20px;
-        padding: 10px;
     }
 
     #about-us h2 {
@@ -474,8 +475,16 @@ footer .social-icon:hover {
         text-align: center;
     }
 
+    #about-us h3 {
+        font-size: 1.9rem;
+        text-align: left;
+        margin: 10px;
+        line-height: 1.5;
+        margin-top: -50px;
+    }
+
     #about-us p {
-        font-size: 0.9rem;
+        font-size: 1rem;
         text-align: justify;
     }
 
