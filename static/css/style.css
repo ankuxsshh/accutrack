@@ -194,24 +194,24 @@ html {
 
 /* FOOTER */
 footer h5 {
-    color: #435ac7;
+    color: #435ac7 !important;
     transition: color 0.3s ease;
     font-weight: 600;
 }
 
 footer h5:hover {
-    color: #435ac7;
+    color: #000000;
     cursor: pointer;
 }
 
 footer .footer-text {
-    color: #435ac7;
+    color: #435ac7 !important;
     transition: color 0.3s ease;
     font-weight: 600;
 }
 
 footer .footer-text:hover {
-    color: #435ac7;
+    color: #000000;
     cursor: pointer;
 }
 
@@ -221,20 +221,19 @@ footer .fab {
     height: 70px;
     width: 70px;
     transition: all 0.3s ease;
-    color: #435ac7;
+    color: #435ac7 !important;
 }
 
 footer .fab:hover {
-    color: rgb(78, 101, 255);
-    background-color: rgb(241, 240, 255) !important;
+    color: rgb(180, 185, 218);
     /* Add background hover effect */
     transform: scale(1.1);
     /* Scale effect */
 }
 
 footer {
-    box-shadow: 2px 2px 2px 4px rgba(0, 0, 0, 0.2);
-    background-color: rgb(241, 240, 255) !important;
+    box-shadow: 2px 2px 2px 4px rgba(0, 0, 0, 0.093);
+    background-color: rgb(249, 248, 254) !important;
     transition: background-color 0.3s ease;
 }
 
@@ -272,7 +271,7 @@ footer .social-icon:hover {
 /* Responsive Styles for smaller devices */
 @media (max-width: 768px) {
     footer .row {
-        text-align: center;
+        text-align: left;
     }
 
     footer .col-md-3 {
@@ -287,7 +286,7 @@ footer .social-icon:hover {
     /* Adjust the social icons row on small screens */
     footer .social-icons-row {
         display: flex;
-        justify-content: center;
+        justify-content: left;
         gap: 20px;
         margin-bottom: 10px;
     }
@@ -296,12 +295,12 @@ footer .social-icon:hover {
 /* WHATSAPP, CALL BUTTONS */
 .fixed-buttons {
     position: fixed;
-    bottom: 10px;
-    right: 12px;
+    bottom: 8px;
+    right: 11px;
     z-index: 2000;
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 20px;
 }
 
 .btn-whatsapp-pulse {
@@ -310,8 +309,8 @@ footer .social-icon:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 60px;
-    height: 60px;
+    width: 55px;
+    height: 55px;
     text-decoration: none;
     border-radius: 50%;
     position: relative;
@@ -766,7 +765,7 @@ button:hover {
 
 .bank-slider {
     display: flex;
-    animation: scroll-right-to-left 40s linear infinite;
+    animation: scroll-right-to-left 20s linear infinite;
 }
 
 .bank-slide {
