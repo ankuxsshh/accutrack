@@ -6,6 +6,23 @@
 <section>
   <div id="imageCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
     <div class="carousel-inner">
+      {% for slide in slides %}
+        <div class="carousel-item {% if forloop.first %}active{% endif %} fade-up">
+          <img src="{{ slide.image.url }}" class="d-block w-100 fade-up" alt="{{ slide.heading }}">
+          <div class="carousel-caption d-flex flex-column justify-content-center align-items-center">
+            <h5 class="overlay-heading fade-up">{{ slide.heading }}</h5>
+            <p class="overlay-text fade-up">{{ slide.description }}</p>
+            <a href="{% url 'about' %}" class="btn btn-outline-light border-none mt-2">Discover more</a>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{% comment %} <section>
+  <div id="imageCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+    <div class="carousel-inner">
       <!-- First Slide -->
       <div class="carousel-item active fade-up">
         <img src="https://www.serviceautomation.org/wp-content/uploads/2023/09/RPA-vs-Service-Automation-scaled.jpg" class="d-block w-100 fade-up" alt="First Slide" />
@@ -26,7 +43,7 @@
       </div>
     </div>
   </div>
-</section>
+</section> {% endcomment %}
 
 <!-- Section: About Us -->
 <section id="about-us" class="py-5">
@@ -66,7 +83,7 @@
       <br>
       <br>
       <!-- First Row: 7 Cards -->
-      <div class="row row-cols-custom-7 g-4 mx-4">
+      <div class="row row-cols-custom-7 g-4 mx-4"> 
         <div class="col">
           <div class="card h-100 service-card fade-up">
             <div class="card-img-overlay d-flex align-items-end justify-content-center">
@@ -347,9 +364,8 @@
               <img src="https://download.logo.wine/logo/Avaya/Avaya-Logo.wine.png" alt="Bank Image 3" />
               <img src="https://upload.wikimedia.org/wikipedia/commons/6/68/Teltonika_logo.sng.png" alt="Bank Image 4" />
               <img src="https://1000marcas.net/wp-content/uploads/2021/05/Linksys-Logo.png" alt="Bank Image 5" />
-              <img src="https://w7.pngwing.com/pngs/824/437/png-transparent-dell-logo-hewlett-packard-brand-high-definition-video-hewlett-packard-blue-text-trademark.png" alt="Bank Image 6" />
+              <img src="https://logos-world.net/wp-content/uploads/2020/08/Dell-Logo.png" alt="Bank Image 6" />
               <img src="https://logolook.net/wp-content/uploads/2022/10/Yamaha-Logo-1967.png" alt="Bank Image 7" />
-              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/3M_wordmark.svg/2560px-3M_wordmark.svg.png" alt="Bank Image 8" />
             </div>
           </div>
         </div>

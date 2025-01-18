@@ -16,6 +16,44 @@
   <section class="projects-section py-5 mt-4 fade-up">
     <h2 class="text-center mb-4 fade-up" style="font-size: 2.4rem; font-weight: bold; color: #435ac7; margin-bottom: 50px;"><b>GALLERY THAT DEFINES US</b></h2>
     <br />
+    <p class="justify-content-center text-center mx-5 fade-up" style="font-size: 1rem; color: #000000; line-height: 1.6;">Welcome to the Gallery of AccuTrack Technologies, your trusted automation partner in Dubai, UAE. Here, we proudly present a visual journey through our accomplishments over the years...</p>
+    <br />
+    <div class="container fade-up">
+      <div class="row g-4">
+        {% for image in gallery_images %}
+        <!-- Gallery Card -->
+        <div class="col-md-3 fade-up">
+          <div class="project-card position-relative overflow-hidden">
+            <img src="{{ image.image.url }}" class="project-card-img img-fluid" alt="{{ image.title }}" />
+            <div class="project-card-overlay d-flex align-items-center justify-content-center">
+              <h5 class="text-white fw-bold">{{ image.caption }}</h5>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+{% endblock %}
+
+{% comment %} {% extends 'base.html' %}
+
+{% block title %}
+  Gallery | ACCUTRACK
+{% endblock %}
+
+{% block content %}
+  <section>
+    <div class="contact-section text-white d-flex justify-content-center align-items-center fade-up" style="background-image: url('https://cdn.digitalisationworld.com/uploads/images/4a3ad2f17bfbd67d8ee1b9ae426d342761649be6c4a74bf3.jpg'); background-size: cover; background-position: center; height: 300px;">
+      <div class="container text-center fade-up">
+        <h1 class="display-4" style="font-size: 42px; font-weight: 500; text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);"><b>GALLERY</b></h1>
+      </div>
+    </div>
+  </section>
+
+  <section class="projects-section py-5 mt-4 fade-up">
+    <h2 class="text-center mb-4 fade-up" style="font-size: 2.4rem; font-weight: bold; color: #435ac7; margin-bottom: 50px;"><b>GALLERY THAT DEFINES US</b></h2>
+    <br />
     <p class="justify-content-center mx-5 fade-up" style="font-size: 1rem; color: #000000; line-height: 1.6;">Welcome to the Gallery of AccuTrack Technologies, your trusted automation partner in Dubai, UAE. Here, we proudly present a visual journey through our accomplishments over the years. Each image tells the story of precision, innovation, and dedication that define our work in industrial and building automation, smart solutions, and cutting-edge technologies.
 
       From state-of-the-art control panels to fully automated systems in commercial and industrial settings, these snapshots highlight the transformative projects we've delivered for our esteemed clients. Explore the diversity of our expertise and the seamless integration of technology into real-world applications, creating smart and efficient solutions.
@@ -106,4 +144,4 @@
       </div>
     </div>
   </section>
-{% endblock %}
+{% endblock %} {% endcomment %}

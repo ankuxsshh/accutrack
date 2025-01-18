@@ -251,15 +251,14 @@ footer .col-md-3 {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 100%;
+    height: 80%;
 }
 
 /* Social icons row to stack icons in two rows */
 footer .social-icons-row {
     display: flex;
     justify-content: center;
-    gap: 20px;
-    margin-bottom: 10px;
+    gap: 10px;
 }
 
 /* Hover effect for social icon links */
@@ -354,7 +353,7 @@ footer .social-icon:hover {
 
 .carousel-item img {
     object-fit: cover;
-    height: 90vh;
+    height: 85vh;
     width: 100%;
 }
 
@@ -527,8 +526,7 @@ footer .social-icon:hover {
     }
 }
 
-
-/* Modify existing styles if necessary */
+/* Maintain existing styles */
 .service-card {
     position: relative;
     overflow: hidden;
@@ -558,21 +556,15 @@ footer .social-icon:hover {
     font-weight: bolder;
 }
 
-.row-cols-custom-7>* {
-    flex: 0 0 calc(100% / 7);
-    max-width: calc(100% / 7);
-}
-
-.row-cols-custom-6>* {
-    flex: 0 0 calc(100% / 6);
-    max-width: calc(100% / 6);
+/* Adjust row for 5 cards */
+.row-cols-custom-5 > * {
+    flex: 0 0 calc(100% / 5);
+    max-width: calc(100% / 5);
 }
 
 /* Mobile Responsiveness */
 @media only screen and (max-width: 600px) {
-
-    .row-cols-custom-7>*,
-    .row-cols-custom-6>* {
+    .row-cols-custom-5 > * {
         flex: 0 0 100%;
         max-width: 100%;
     }
@@ -582,11 +574,11 @@ footer .social-icon:hover {
         text-align: justify;
     }
 
-    /* Optionally, you can also adjust the title size on mobile */
     h2 {
         font-size: 1.8rem;
     }
 }
+
 
 .why-container .row {
     display: flex;
@@ -773,18 +765,17 @@ button:hover {
 }
 
 .bank-slide img {
-    width: 220px;
+    width: 180px;
     /* Uniform width */
-    height: 220px;
+    height: 180px;
     /* Uniform height */
     object-fit: contain;
     /* Ensures images fit within the container while maintaining aspect ratio */
     margin: 20px;
-    padding: 20px;
+    padding: 10px;
     /* Space between images */
     border-radius: 0px;
     /* Optional: Adds slight rounding for a polished look */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     /* Optional: Adds a subtle shadow for better aesthetics */
 }
 
